@@ -1,13 +1,3 @@
-# TensorFlow
+# Tensorflow tutorials
 
-This is the base TensorFlow project.
-
-Conatains:
-
-- Jupyter for interactive development
-
-- Tensorbard for monitoring training process
-
-- Examples of training tasks
-
-- Examples of distributed training tasks
+The TensorFlow tutorials are written as Jupyter notebooks and run directly in Kibernetika.AI hosted notebook environment that requires no setup. 
