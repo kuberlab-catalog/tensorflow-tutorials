@@ -25,14 +25,6 @@ tensorboard:
     name: Install Tensorboard
     kind: boolean
 
-src:
-  value: https://github.com/lsheiba/tf_tutorials
-  accountId: ''
-  revision: ''
-  wizard:
-    name: "Source Code"
-    kind: git
-
 dataset:
  value: ''
  version: ''
