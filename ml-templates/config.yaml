@@ -29,7 +29,7 @@ spec:
           cpu: "1"
           memory: 4Gi
       default_volume_mapping: true
-  - name: standalone
+  - name: run-notebook
     resources:
     - name: worker
       replicas: 1
@@ -38,8 +38,8 @@ spec:
       images:
         gpu: "kuberlab/tensorflow:gpu-36-{{.tensorflow_version.value}}-full"
         cpu: "kuberlab/tensorflow:cpu-36-{{.tensorflow_version.value}}-full"
-      command: python hello-tensorflow.py
-      workdir: "$SRC_DIR"
+      command: "jupyter nbconvert tutorials/quickstart/beginner.ipynb --execute --to html --output-dir $CODE_DIR --ExecutePreprocessor.timeout=-1"
+      workdir: "$CODE_DIR"
       resources:
         accelerators:
           gpu: 0
